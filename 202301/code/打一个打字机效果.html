@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">
+    <span class="content"></span> | 
+  </div>
+  <script>
+    const content = document.querySelector('.content')
+    const  dictums = '不管你在外面经历了什么，天黑了，我带你回家。' // 字典
+    // 每次打一个字都是一个任务
+    const queue = []
+    const addTask = () => {
+     for(let i = 0; i < dictums.length; i++) {
+      const isFinish = i === dictums.length - 1
+      const task = () => {
+        return new Promise(resolve => {
+         setTimeout(() => {
+          content.textContent += dictums[i]
+          resolve(isFinish)
+          }, 200)
+        })
+      }
+      queue.push(task)
+     }
+    }
+    const delTask = () => {
+      const contentLength = content.textContent.length
+      for(let i = dictums.length - 1 ; i >= 0; i--) {
+      const isFinish = i === 0
+      const task = () => {
+        return new Promise(resolve => {
+         setTimeout(() => {
+          content.textContent  = content.textContent.slice(0, i)
+          resolve(isFinish)
+          }, 200)
+        })
+      }
+      queue.push(task)
+     }
+
+    }
+    // 执行任务
+    const executeTask = () => {
+      if(!queue.length) return
+      const taskFn = queue.shift()
+        taskFn().then(isFinish => {
+          if(isFinish) {
+            // 进行删除
+            delTask()
+            executeDelTask()
+          }else {
+            executeTask()
+          }
+      })
+    }
+    const executeDelTask = () => {
+      if(!queue.length) return
+      const taskFn = queue.shift()
+        taskFn().then(isFinish => {
+          if(isFinish) {
+            addTask()
+            executeTask()
+          }else {
+            executeDelTask()
+          }
+      })
+    }
+
+    addTask()
+    executeTask()
+  </script>
+</body>
+</html>
