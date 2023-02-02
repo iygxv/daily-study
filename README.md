@@ -10,9 +10,3 @@
 [个人博客](https://codevity.top/)
 
 [github](https://github.com/iygxv)
-
-# 我的项目
-
-[interface生成](https://codevity.top/interfaceCreate/)
-
-[文章图片生成](https://codevity.top/create_pic.html)
