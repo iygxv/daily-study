@@ -180,6 +180,9 @@ class Promise {
     })
     return promise2
   }
+  catch(onRejected) {
+    return this.then(null, onRejected)
+  }
 }
 
 Promise.deferred = function () {
