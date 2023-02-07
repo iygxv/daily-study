@@ -1,6 +1,6 @@
 const path = require('path')
 const webpackMerge = require('webpack-merge').default
-const { VueLoaderPlugin } = require('vue-loader/dist/index')
+const { VueLoaderPlugin } = require('vue-loader')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')

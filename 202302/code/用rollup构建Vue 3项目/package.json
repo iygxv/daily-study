@@ -1,0 +1,28 @@
+{
+  "name": "rollup-vue3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:iygxv/daily-study.git",
+  "author": "zwf <871772825@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development rollup -w -c ./rollup.config.js", 
+    "build": "NODE_ENV=production rollup -c ./rollup.config.js"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-html": "^1.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-replace": "^5.0.2",
+    "rollup": "^3.14.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-serve": "^2.0.2",
+    "rollup-plugin-vue": "^6.0.0"
+  }
+}
