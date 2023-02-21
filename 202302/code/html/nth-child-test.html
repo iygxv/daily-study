@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=div, initial-scale=1.0">
+  <title>nth-child-test</title>
+</head>
+<style>
+  .box {
+    display: flex;
+  }
+  .box span{
+    display: block;
+    width: 100px;
+    height: 60px;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 60px;
+  }
+  /* span:nth-child(1)  表示父元素中子元素为第一的并且名字为 span 的标签被选中 */
+  .box span:nth-child(1) {
+    background: lightgreen;
+  }
+</style>
+<body>
+  <div class="box">
+    <!-- span 1 会变成lightgreen颜色 -->
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+  </div>
+</body>
+</html>
