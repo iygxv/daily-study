@@ -3,6 +3,7 @@ function humpToLine(humpStr) {
   let lineStr = ''
   for(let i = 0; i < humpStr.length; i++) {
     lineStr += humpStr[i].replace(/([A-Z])/, function(match, key){
+      console.log(match)
       return `_${key.toLowerCase()}`
     })
   }
