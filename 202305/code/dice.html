@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 骰子的样式 */
+    .dice {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      perspective: 1000px;
+    }
+
+    /* 骰子的面的样式 */
+    .face {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-image: url(https://github.com/iygxv/AI-parse/blob/main/dice-removebg-preview.png);
+      background-size: 600px 200px;
+      border: 1px solid black;
+    }
+
+    /* 第一个面 */
+    .one {
+      transform: rotateX(90deg) translateZ(100px);
+    }
+
+    /* 第二个面 */
+    .two {
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    /* 第三个面 */
+    .three {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+
+    /* 第四个面 */
+    .four {
+      transform: rotateY(180deg) translateZ(100px);
+    }
+
+    /* 第五个面 */
+    .five {
+      transform: rotateX(-90deg) translateZ(100px) rotate(180deg);
+    }
+
+    /* 第六个面 */
+    .six {
+      transform: translateZ(200px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dice">
+    <div class="face one"></div>
+    <div class="face two"></div>
+    <div class="face three"></div>
+    <div class="face four"></div>
+    <div class="face five"></div>
+    <div class="face six"></div>
+  </div>
+</body>
+
+</html>
