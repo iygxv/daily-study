@@ -7,6 +7,6 @@
 
 [掘金](https://juejin.cn/user/1055169568063134)
 
-[个人博客](https://codevity.top/)
+[个人博客](https://iygxv.github.io/blog_static/)
 
 [github](https://github.com/iygxv)

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+   .triangle {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-right: 100px solid #F00;
+  border-bottom: 50px solid transparent;
+  animation: rotate-and-shrink 2s linear ;
+  transform-origin: center center;
+}
+
+@keyframes rotate-and-shrink {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(0);
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="triangle"></div>
+</body>
+
+</html>
